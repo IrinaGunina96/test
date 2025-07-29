@@ -1,0 +1,579 @@
+{
+	"info": {
+		"_postman_id": "fe7090e3-5b1c-48bd-9344-337bb42ffc7f",
+		"name": "Petstore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44867451",
+		"_collection_link": "https://irinagunina-6393575.postman.co/workspace/Irina-Gunina's-Workspace~a12b1063-354d-45f0-8218-a1980e90837b/collection/44867451-fe7090e3-5b1c-48bd-9344-337bb42ffc7f?action=share&source=collection_link&creator=44867451"
+	},
+	"item": [
+		{
+			"name": "/pet/{petId}/uploadImage (Загрузить изображение)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "accept-language",
+						"value": "ru,en;q=0.9"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer 5d25d809-0e23-4b5a-ba2b-40def2f2a1e5"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache"
+					},
+					{
+						"key": "origin",
+						"value": "https://petstore.swagger.io"
+					},
+					{
+						"key": "pragma",
+						"value": "no-cache"
+					},
+					{
+						"key": "priority",
+						"value": "u=1, i"
+					},
+					{
+						"key": "referer",
+						"value": "https://petstore.swagger.io/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"YaBrowser\";v=\"25.4\", \"Yowser\";v=\"2.5\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36"
+					},
+					{
+						"key": "Cookie",
+						"value": "_ga=GA1.1.177981082.1739970342; _ga_YKCD3Q08JF=GS1.1.1739970459.1.1.1739970484.0.0.0; userId=56305821740466574887; rl_page_init_referrer=RudderEncrypt%3AU2FsdGVkX1%2BeKRpOCTCaQnMPvemhQFKXQAdzpV6BoLWJCIDGBH1jg2I%2ByhZ2IEQ5; rl_page_init_referring_domain=RudderEncrypt%3AU2FsdGVkX18CDEgPS6Nk6HgVsKVOrmdVZzkrTJ9XrPA%3D; rl_user_id=RudderEncrypt%3AU2FsdGVkX19f%2BrSR3EkKzu7iyXc1CHOkRpDQJ7HfEuk%3D; rl_trait=RudderEncrypt%3AU2FsdGVkX19LmTkcy3Cne8J1Mai%2B8oYudQPjb3u7a1U%3D; rl_group_id=RudderEncrypt%3AU2FsdGVkX1%2F%2FneIWANAdF%2Bj0dgh5PgJY58Zy6v8Biek%3D; rl_group_trait=RudderEncrypt%3AU2FsdGVkX1%2Br6DBMQlBsRmAehy6G4DEbaG7T2zfe9mY%3D; rl_anonymous_id=RudderEncrypt%3AU2FsdGVkX18FcGEu78dSsdRyd06hHeD%2B4r7XEb1c1RCtEEhQt7DedfUN8AfisEDk4qfvRooefFJPze%2FMMoh7Gg%3D%3D; rl_session=RudderEncrypt%3AU2FsdGVkX1%2BlEbJazeCT6Pz8pDoqbMoEn4v0%2B4v4%2FA7QqK6zReqovkDibE9s6VXIZjplORl0V1i26huL4N3SrfoYBlC7t3oXm%2Bb%2F1QinyO7FY6RXZ%2Fbaipumd7A7apWTHqS4mPnMjwW9MszxXq0Y0Q%3D%3D; _ga_R8SY7470GY=GS2.1.s1747050680$o4$g1$t1747050703$j0$l0$h0; cebs=1; _ce.clock_data=26%2C95.53.200.208%2C1%2Cf272b80dd9387cbc49a2fdf7a88b14f1%2CYandex%2CRU; cookiehub=eyJhbnN3ZXJlZCI6dHJ1ZSwicmV2aXNpb24iOjEsImRudCI6ZmFsc2UsImFsbG93U2FsZSI6dHJ1ZSwiaW1wbGljdCI6ZmFsc2UsInJlZ2lvbiI6IkcwIiwidG9rZW4iOiJOR0xMYjNwQ0NuN285OVdhR2hpRDJPY2JTZUczOEwwV3I4N0E3bGs2a1p2WDdYdGNDVVNBNHRTR09OUERNSjBMIiwidGltZXN0YW1wIjoiMjAyNS0wNi0wNlQxNzo0Njo0NS42NDZaIiwiYWxsQWxsb3dlZCI6dHJ1ZSwiY2F0ZWdvcmllcyI6W10sInZlbmRvcnMiOltdLCJzZXJ2aWNlcyI6W119; _ce.s=v~830c0803f1753a3d3b7731292b1527717e712cb4~lcw~1749233156792~vir~returning~lva~1749231679317~vpv~10~v11.cs~243208~v11.s~72af2940-39f8-11f0-a152-6518c7958c15~v11.vs~830c0803f1753a3d3b7731292b1527717e712cb4~v11ls~72af2940-39f8-11f0-a152-6518c7958c15~v11.fsvd~e30%3D~lcw~1749233945414; JSESSIONID=c6nnzpzpplfd5wd2jqw5u8uv; _ga_F11FV1HQ2E=GS2.1.s1749231678$o15$g1$t1749234237$j22$l0$h0; cebsp_=11"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/irina/Pictures/----.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base-url}}{{pet}}/1996/uploadImage",
+					"host": [
+						"{{base-url}}{{pet}}"
+					],
+					"path": [
+						"1996",
+						"uploadImage"
+					]
+				},
+				"description": "Generated from cURL: curl 'https://petstore.swagger.io/v2/pet/1/uploadImage' \\\r\n  -H 'accept: application/json' \\\r\n  -H 'accept-language: ru,en;q=0.9' \\\r\n  -H 'authorization: Bearer 5d25d809-0e23-4b5a-ba2b-40def2f2a1e5' \\\r\n  -H 'cache-control: no-cache' \\\r\n  -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundaryMeIG4axbtTOB0VLL' \\\r\n  -b '_ga=GA1.1.177981082.1739970342; _ga_YKCD3Q08JF=GS1.1.1739970459.1.1.1739970484.0.0.0; userId=56305821740466574887; rl_page_init_referrer=RudderEncrypt%3AU2FsdGVkX1%2BeKRpOCTCaQnMPvemhQFKXQAdzpV6BoLWJCIDGBH1jg2I%2ByhZ2IEQ5; rl_page_init_referring_domain=RudderEncrypt%3AU2FsdGVkX18CDEgPS6Nk6HgVsKVOrmdVZzkrTJ9XrPA%3D; rl_user_id=RudderEncrypt%3AU2FsdGVkX19f%2BrSR3EkKzu7iyXc1CHOkRpDQJ7HfEuk%3D; rl_trait=RudderEncrypt%3AU2FsdGVkX19LmTkcy3Cne8J1Mai%2B8oYudQPjb3u7a1U%3D; rl_group_id=RudderEncrypt%3AU2FsdGVkX1%2F%2FneIWANAdF%2Bj0dgh5PgJY58Zy6v8Biek%3D; rl_group_trait=RudderEncrypt%3AU2FsdGVkX1%2Br6DBMQlBsRmAehy6G4DEbaG7T2zfe9mY%3D; rl_anonymous_id=RudderEncrypt%3AU2FsdGVkX18FcGEu78dSsdRyd06hHeD%2B4r7XEb1c1RCtEEhQt7DedfUN8AfisEDk4qfvRooefFJPze%2FMMoh7Gg%3D%3D; rl_session=RudderEncrypt%3AU2FsdGVkX1%2BlEbJazeCT6Pz8pDoqbMoEn4v0%2B4v4%2FA7QqK6zReqovkDibE9s6VXIZjplORl0V1i26huL4N3SrfoYBlC7t3oXm%2Bb%2F1QinyO7FY6RXZ%2Fbaipumd7A7apWTHqS4mPnMjwW9MszxXq0Y0Q%3D%3D; _ga_R8SY7470GY=GS2.1.s1747050680$o4$g1$t1747050703$j0$l0$h0; cebs=1; _ce.clock_data=26%2C95.53.200.208%2C1%2Cf272b80dd9387cbc49a2fdf7a88b14f1%2CYandex%2CRU; cookiehub=eyJhbnN3ZXJlZCI6dHJ1ZSwicmV2aXNpb24iOjEsImRudCI6ZmFsc2UsImFsbG93U2FsZSI6dHJ1ZSwiaW1wbGljdCI6ZmFsc2UsInJlZ2lvbiI6IkcwIiwidG9rZW4iOiJOR0xMYjNwQ0NuN285OVdhR2hpRDJPY2JTZUczOEwwV3I4N0E3bGs2a1p2WDdYdGNDVVNBNHRTR09OUERNSjBMIiwidGltZXN0YW1wIjoiMjAyNS0wNi0wNlQxNzo0Njo0NS42NDZaIiwiYWxsQWxsb3dlZCI6dHJ1ZSwiY2F0ZWdvcmllcyI6W10sInZlbmRvcnMiOltdLCJzZXJ2aWNlcyI6W119; _ce.s=v~830c0803f1753a3d3b7731292b1527717e712cb4~lcw~1749233156792~vir~returning~lva~1749231679317~vpv~10~v11.cs~243208~v11.s~72af2940-39f8-11f0-a152-6518c7958c15~v11.vs~830c0803f1753a3d3b7731292b1527717e712cb4~v11ls~72af2940-39f8-11f0-a152-6518c7958c15~v11.fsvd~e30%3D~lcw~1749233945414; JSESSIONID=c6nnzpzpplfd5wd2jqw5u8uv; _ga_F11FV1HQ2E=GS2.1.s1749231678$o15$g1$t1749234237$j22$l0$h0; cebsp_=11' \\\r\n  -H 'origin: https://petstore.swagger.io' \\\r\n  -H 'pragma: no-cache' \\\r\n  -H 'priority: u=1, i' \\\r\n  -H 'referer: https://petstore.swagger.io/' \\\r\n  -H 'sec-ch-ua: \"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"YaBrowser\";v=\"25.4\", \"Yowser\";v=\"2.5\"' \\\r\n  -H 'sec-ch-ua-mobile: ?0' \\\r\n  -H 'sec-ch-ua-platform: \"Windows\"' \\\r\n  -H 'sec-fetch-dest: empty' \\\r\n  -H 'sec-fetch-mode: cors' \\\r\n  -H 'sec-fetch-site: same-origin' \\\r\n  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36' \\\r\n  --data-raw $'------WebKitFormBoundaryMeIG4axbtTOB0VLL\\r\\nContent-Disposition: form-data; name=\"file\"; filename=\"----.png\"\\r\\nContent-Type: image/png\\r\\n\\r\\n\\r\\n------WebKitFormBoundaryMeIG4axbtTOB0VLL--\\r\\n'"
+			},
+			"response": []
+		},
+		{
+			"name": "/pet (Добавить нового питомца в магазин)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1996,\r\n  \"category\": {\r\n    \"id\": 1996,\r\n    \"name\": \"dog\"\r\n  },\r\n  \"name\": \"Randy\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 1996,\r\n      \"name\": \"beagle\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base-url}}{{pet}}",
+					"host": [
+						"{{base-url}}{{pet}}"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\r\n  'https://petstore.swagger.io/v2/pet' \\\r\n  -H 'accept: application/json' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n  \"id\": 0,\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"doggie\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "/pet (Обновить существующего питомца)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1996,\r\n  \"category\": {\r\n    \"id\": 1996,\r\n    \"name\": \"dog\"\r\n  },\r\n  \"name\": \"doggie\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 1996,\r\n      \"name\": \"Randy_new\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base-url}}{{pet}}",
+					"host": [
+						"{{base-url}}{{pet}}"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'PUT' \\\r\n  'https://petstore.swagger.io/v2/pet' \\\r\n  -H 'accept: application/json' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n  \"id\": 1,\r\n  \"category\": {\r\n    \"id\": 1,\r\n    \"name\": \"string\"\r\n  },\r\n  \"name\": \"doggie\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 1,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "/pet/findByStatus(Найти существующего питомца по статусу)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": ""
+					}
+				],
+				"url": {
+					"raw": "{{base-url}}{{pet}}/findByStatus?status=sold",
+					"host": [
+						"{{base-url}}{{pet}}"
+					],
+					"path": [
+						"findByStatus"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "sold"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\r\n  'https://petstore.swagger.io/v2/pet/findByStatus?status=sold' \\\r\n  -H 'accept: application/jso"
+			},
+			"response": []
+		},
+		{
+			"name": "/pet/{petId} (Найти питомца по идентификатору)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{base-url}}{{pet}}/15877",
+					"host": [
+						"{{base-url}}{{pet}}"
+					],
+					"path": [
+						"15877"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'GET' \\\r\n  'https://petstore.swagger.io/v2/pet/12' \\\r\n  -H 'accept: application/json'"
+			},
+			"response": []
+		},
+		{
+			"name": " /pet/{petId} (Обновить информацию о питомце в магазине с помощью формы)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Randy",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "available",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base-url}}{{pet}}/1996",
+					"host": [
+						"{{base-url}}{{pet}}"
+					],
+					"path": [
+						"1996"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'POST' \\\r\n  'https://petstore.swagger.io/v2/pet/12' \\\r\n  -H 'accept: application/json' \\\r\n  -d ''"
+			},
+			"response": []
+		},
+		{
+			"name": "/pet/{petId} (Удалить домашнее животное)",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "special-key",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base-url}}{{pet}}/1996",
+					"host": [
+						"{{base-url}}{{pet}}"
+					],
+					"path": [
+						"1996"
+					]
+				},
+				"description": "Generated from cURL: curl -X 'DELETE' \\\r\n  'https://petstore.swagger.io/v2/pet/12' \\\r\n  -H 'accept: application/"
+			},
+			"response": []
+		},
+		{
+			"name": "/store/inventory (Вернуть инвентарь домашних животных по статусу)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}{{store}}/inventory",
+					"host": [
+						"{{base-url}}{{store}}"
+					],
+					"path": [
+						"inventory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/store/order (Оформить заказ на домашнее животное)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1996,\r\n  \"petId\": 0,\r\n  \"quantity\": 0,\r\n  \"shipDate\": \"2025-06-18T18:16:15.537Z\",\r\n  \"status\": \"placed\",\r\n  \"complete\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base-url}}{{store}}/order",
+					"host": [
+						"{{base-url}}{{store}}"
+					],
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/store/order {orderId} (Поиск заказа на покупку по идентификатору)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}{{store}}/order/1996",
+					"host": [
+						"{{base-url}}{{store}}"
+					],
+					"path": [
+						"order",
+						"1996"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/store/order {orderId} (Удалить заказ на покупку по идентификатору)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}{{store}}/order/1996",
+					"host": [
+						"{{base-url}}{{store}}"
+					],
+					"path": [
+						"order",
+						"1996"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user/createWithList (Создать список пользователей с заданным входным массивом)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"id\": 1808,\r\n        \"username\": \"Irina4\",\r\n        \"firstName\": \"Irina4\",\r\n        \"lastName\": \"Gunina4\",\r\n        \"email\": \"Irina.Gunina.964@yandex.ru\",\r\n        \"password\": \"1\",\r\n        \"phone\": \"+79215454458\",\r\n        \"userStatus\": 0\r\n    },\r\n    {\r\n        \"id\": 1809,\r\n        \"username\": \"Irina5\",\r\n        \"firstName\": \"Irina5\",\r\n        \"lastName\": \"Gunina5\",\r\n        \"email\": \"Irina.Gunina.965@yandex.ru\",\r\n        \"password\": \"1\",\r\n        \"phone\": \"+79215454458\",\r\n        \"userStatus\": 0\r\n    }  \r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base-url}}{{user}}/createWithList",
+					"host": [
+						"{{base-url}}{{user}}"
+					],
+					"path": [
+						"createWithList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user/{username} (Получить пользователя по имени пользователя)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}} {{user}}/",
+					"host": [
+						"{{base-url}} {{user}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user/{username} (Обновленный пользователь)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": 1808,\r\n        \"username\": \"Irina4\",\r\n        \"firstName\": \"Irina_PUT\",\r\n        \"lastName\": \"Gunina_PUT\",\r\n        \"email\": \"Irina.Gunina.96_PUT@yandex.ru\",\r\n        \"password\": \"1\",\r\n        \"phone\": \"+79215454458\",\r\n        \"userStatus\": 0\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base-url}}{{user}}/:username",
+					"host": [
+						"{{base-url}}{{user}}"
+					],
+					"path": [
+						":username"
+					],
+					"variable": [
+						{
+							"key": "username",
+							"value": "Irina4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user/{username} (Удалить пользователя)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}} {{user}}/",
+					"host": [
+						"{{base-url}} {{user}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user/login (Регистрация пользователя в системе)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}} {{user}}/login",
+					"host": [
+						"{{base-url}} {{user}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user/logout (Завершить текущий сеанс пользователя)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}} {{user}}/logout",
+					"host": [
+						"{{base-url}} {{user}}"
+					],
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user/createWithArray (Создать список пользователей с заданным входным массивом)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"id\": 1806,\r\n        \"username\": \"Irina2\",\r\n        \"firstName\": \"Irina2\",\r\n        \"lastName\": \"Gunina2\",\r\n        \"email\": \"Irina.Gunina.962@yandex.ru\",\r\n        \"password\": \"1\",\r\n        \"phone\": \"+79215454458\",\r\n        \"userStatus\": 0\r\n    },\r\n    {\r\n        \"id\": 1807,\r\n        \"username\": \"Irina3\",\r\n        \"firstName\": \"Irina3\",\r\n        \"lastName\": \"Gunina3\",\r\n        \"email\": \"Irina.Gunina.963@yandex.ru\",\r\n        \"password\": \"1\",\r\n        \"phone\": \"+79215454458\",\r\n        \"userStatus\": 0\r\n    }  \r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base-url}}{{user}}/createWithArray",
+					"host": [
+						"{{base-url}}{{user}}"
+					],
+					"path": [
+						"createWithArray"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user (Создать пользователя)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1805,\r\n  \"username\": \"Irina\",\r\n  \"firstName\": \"Irina\",\r\n  \"lastName\": \"Gunina\",\r\n  \"email\": \"Irina.Gunina.96@yandex.ru\",\r\n  \"password\": \"1\",\r\n  \"phone\": \"+79215454458\",\r\n  \"userStatus\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base-url}}{{user}}",
+					"host": [
+						"{{base-url}}{{user}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base-url",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
